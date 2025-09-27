@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive CSS & JS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>🎬 CSS & JavaScript Animation Demo</h1>
+
+  <!-- Part 1: Buttons with CSS hover transitions -->
+  <button class="fancy-btn" title="Try hovering!">Hover Me ✨</button>
+  <button class="fancy-btn" title="Try hovering!">Hover Me Too ✨</button>
+
+  <!-- Counter -->
+  <div style="margin: 1em 0;">
+    <button id="counterBtn" title="Click to increase counter">Click Me!</button>
+    <span id="counterValue">0</span>
+  </div>
+
+  <!-- Live input -->
+  <div style="margin: 1em 0;">
+    <input type="text" id="liveInput" placeholder="Type something..." />
+    <span id="liveOutput"></span>
+  </div>
+
+  <!-- Color picker for box -->
+  <div style="margin: 1em 0;">
+    <label for="colorPicker">Pick Box Color: </label>
+    <input type="color" id="colorPicker" value="#3498db" />
+  </div>
+
+  <!-- Light/Dark mode toggle -->
+  <div style="margin: 1em 0;">
+    <button id="toggleThemeBtn">Toggle Light/Dark Mode</button>
+  </div>
+
+  <!-- Part 2 + 3: Box animation triggered by JS -->
+  <div class="box"></div>
+  <button id="animateBtn" title="Click to animate the box">Animate Box 🎨</button>
+
+  <!-- Part 3: Modal controlled by JS -->
+  <button id="openModalBtn" title="Open the modal">Open Modal 🎬</button>
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span id="closeModalBtn" title="Close">&times;</span>
+      <p>Hello! I slide and fade thanks to CSS + JS 😎</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

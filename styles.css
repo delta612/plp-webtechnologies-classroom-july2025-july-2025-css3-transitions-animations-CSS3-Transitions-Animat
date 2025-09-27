@@ -1,0 +1,128 @@
+/* General Styling */
+body {
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  color: #fff;
+}
+
+/* Ripple Buttons */
+.ripple-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #6c5ce7;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.ripple-btn:hover {
+  transform: scale(1.05);
+}
+
+.ripple-btn span {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Counter Box */
+.counter-box {
+  margin: 20px auto;
+  padding: 15px;
+  background: #00cec9;
+  border-radius: 12px;
+  width: 200px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.counter-box.active {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Card Flip */
+.card {
+  width: 150px;
+  height: 200px;
+  margin: 20px auto;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card-front {
+  background: #fd79a8;
+}
+
+.card-back {
+  background: #55efc4;
+  transform: rotateY(180deg);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  color: black;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(-60px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.modal.show .modal-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#closeModal {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
